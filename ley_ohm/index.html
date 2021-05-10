@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ley de OHM</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 2em;">
+        <div class="row center-align z-depth-5 indigo" style="padding: 1em 2em;">
+            <div>
+                <p>
+                <h2 class="white-text">Ley de Ohm</h2>
+                </p>
+            </div>
+            <div class="col l4 m12 s12">
+                <form id="form_resistencia" class="z-depth-2 white" action="" style="padding: 1em;">
+                    <p>
+                    <h3>Resistencia</h3>
+                    </p>
+                    <div><img src="./imagenes/resistencia.jpg" alt=""></div>
+                    <div class="row">
+                        <div class="input-field col s4 m4 l4">
+                            <input id="r_resistencia" type="text" class="validate red-text" placeholder="Resistencia"
+                                readonly>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="r_voltaje" type="number" class="validate">
+                            <label for="r_voltaje">Voltaje</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="r_intensidad" type="number" class="validate">
+                            <label for="r_intensidad">Intensidad</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-default" id="btn_resistencia" type="button">Calcular Resistencia</button>
+                </form>
+            </div>
+            <div class="col l4 m12 s12">
+                <form id="form_intensidad" class="z-depth-2 white" action="" style="padding: 1em;">
+                    <p>
+                    <h3>Intensidad</h3>
+                    </p>
+                    <div><img src="./imagenes/corriente.jpg" alt=""></div>
+                    <div class="row">
+                        <div class="input-field col s4 m4 l4">
+                            <input id="i_intensidad" type="text" class="validate red-text" placeholder="Intensidad"
+                                readonly>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="i_voltaje" type="number" class="validate">
+                            <label for="i_voltaje">Voltaje</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="i_resistencia" type="number" class="validate">
+                            <label for="i_resistencia">Resistencia</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-default" id="btn_intensidad" type="button">Calcular Intensidad</button>
+                </form>
+            </div>
+            <div class="col l4 m12 s12">
+                <form id="form_voltaje" class="z-depth-2 white" action="" style="padding: 1em;">
+                    <p>
+                    <h3>Voltaje</h3>
+                    </p>
+                    <div><img src="./imagenes/voltaje.jpg" alt=""></div>
+                    <div class="row">
+                        <div class="input-field col s4 m4 l4">
+                            <input id="v_voltaje" type="text" class="validate red-text" placeholder="Voltaje" readonly>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="v_intensidad" type="number" class="validate">
+                            <label for="v_intensidad">Intensidad</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input id="v_resistencia" type="number" class="validate">
+                            <label for="v_resistencia">Resistencia</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-default" id="btn_voltaje" type="button">Calcular Voltaje</button>
+                </form>
+            </div>
+            <button class="btn red" id="btn_borrar" type="button" style="margin-top: 1em;">Borrar todos los
+                valores</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
