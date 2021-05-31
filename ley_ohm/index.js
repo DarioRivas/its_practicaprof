@@ -50,7 +50,5 @@ const borrar_valores = () => {
     document.querySelector("#r_resistencia").value = "";*/
 }
 
-
-
 const btn_borrar = document.querySelector("#btn_borrar");
 btn_borrar.addEventListener("click", borrar_valores);
