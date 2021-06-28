@@ -3,11 +3,11 @@ const mispropiedades = {
         return {
             nombre: '',
             apellido: '',
-            dni:'',
-            cuota:'',
-            correo:'',
-            importe:'',
-            fecha:'',
+            dni: '',
+            cuota: '',
+            correo: '',
+            importe: '',
+            fecha: '',
             listaPagos: []
         }
     },
@@ -25,10 +25,10 @@ const mispropiedades = {
             if ("tareas" in localStorage) {
                 this.listaPagos = JSON.parse(localStorage.getItem("pagos"));
                 this.listaPagos.push(nuevoPago);
-                localStorage.setItem("pagos",JSON.stringify(this.listaPagos));
+                localStorage.setItem("pagos", JSON.stringify(this.listaPagos));
             } else {
                 this.listaPagos.push(nuevoPago);
-                localStorage.setItem("pagos",JSON.stringify(this.listaPagos));
+                localStorage.setItem("pagos", JSON.stringify(this.listaPagos));
             }
             this.nombre = '';
             this.apellido = '';
@@ -38,25 +38,25 @@ const mispropiedades = {
             this.importe = '';
             this.fecha = '';
         },
-        listarPagos(){
-            if("pagos" in localStorage){
+        listarPagos() {
+            if ("pagos" in localStorage) {
                 this.listaPagos = JSON.parse(localStorage.getItem("pagos"));
-            }else{
+            } else {
                 this.listaPagos = [];
             }
         },
-        eliminarPago(index){
-            this.listaPagos.splice(index,1);
-            localStorage.setItem("pagos",JSON.stringify(this.listaPagos));
+        eliminarPago(index) {
+            this.listaPagos.splice(index, 1);
+            localStorage.setItem("pagos", JSON.stringify(this.listaPagos));
         },
-        vaciarLocal(){
+        vaciarLocal() {
             localStorage.removeItem("pagos");
             this.listarPagos();
         }
     },
-mounted() {
-    this.listarPagos();
+    mounted() {
+        this.listarPagos();
 
-}
+    }
 }
 Vue.createApp(mispropiedades).mount("#app");
