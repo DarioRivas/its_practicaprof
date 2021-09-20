@@ -14,10 +14,10 @@ enrutador.get('/producto', async (req, res) => {
             console.log('ERROR')
         } else {
             //OBTENEMOS EL RESULTADO COMO JSON
-            res.json(rows);
+            res.json(rows)
         }
-    });
-})
+    })
+});
 
 //OBTENER UNO SOLO
 enrutador.get('/producto/:codigo', async (req, res) => {
@@ -28,7 +28,7 @@ enrutador.get('/producto/:codigo', async (req, res) => {
             return console.log('ERROR')
         } else {
             //OBTENEMOS EL RESULTADO COMO JSON
-            res.json(rows[0]);
+            res.json(rows[0])
         }
     })
 });
@@ -40,9 +40,9 @@ enrutador.delete('/producto/:codigo', async (req, res) => {
         if (err) {
             return console.log('ALGO HA OCURRIDO')
         } else {
-            res.json('OPERACION EXITOSA!!!');
+            res.json('OPERACION EXITOSA!!!')
         }
-    });
+    })
 });
 
 //CARGAR
@@ -52,10 +52,10 @@ enrutador.post('/producto/', async (req, res) => {
         if (err) {
             return console.log('ALGO OCURRIO CON LA CARGA')
         } else {
-            res.json("CARGA EXITOSA!!!");
+            res.json("CARGA EXITOSA!!!")
         }
-    });
-})
+    })
+});
 
 
 enrutador.put('/producto/:codigo', async (req, res) => {
@@ -66,9 +66,9 @@ enrutador.put('/producto/:codigo', async (req, res) => {
             return console.log('HA OCURRIDO UN PROBLEMA')
         } else {
             //console.log('OPERACION EXITOSA!!!')
-            res.json('OPERACION EXITOSA!!!');
+            res.json('OPERACION EXITOSA!!!')
         }
-    });
-})
+    })
+});
 
 module.exports = enrutador;
