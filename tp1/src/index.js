@@ -15,7 +15,7 @@ server.use(cors())
 server.use(morgan('dev'))
 
 //ASIGNO UN PUERTO PREDETERMINADO
-server.set('port', process.env.PORT || 3001)
+server.set('port', process.env.PORT || 3000)
 
 //ASIGNO LAS RUTAS
 server.use(require('./routes/producto.route'))
