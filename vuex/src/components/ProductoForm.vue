@@ -76,6 +76,7 @@
             <th>$ Venta</th>
             <th>Stock</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
 
@@ -87,17 +88,20 @@
             <td>{{ producto.precio_compra }}</td>
             <td>{{ producto.precio_venta }}</td>
             <td>{{ producto.stock }}</td>
-
             <td>
               <!-- Le envio el ID leyendo la lista !-->
               <button
                 @click="eliminarProducto(producto.id_producto)"
                 class="btn btn-danger btn-sm"
               >
-                X
+                <i class="bi bi-x-circle"></i>
+                ELIMINAR
               </button>
+            </td>
+            <td>
               <button @click="editar(producto)" class="btn btn-primary btn-sm">
-                Editar
+                <i class="bi bi-wrench"></i>
+                EDITAR
               </button>
             </td>
           </tr>
@@ -128,7 +132,7 @@ export default {
         (this.precio_compra = ""),
         (this.precio_venta = ""),
         (this.stock = ""),
-        this.estado = 0;
+        (this.estado = 0);
     },
     listarProducto() {
       this.axios.get("http://localhost:3000/producto").then((result) => {
