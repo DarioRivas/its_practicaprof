@@ -1,0 +1,7 @@
+npm init -y
+npm i express
+npm i cors
+npm i nodemon -D
+en el package.json: agregar en DEPENDECIES=   "socket.io":"^2.3.0"
+npm i (para instalar el socket agregado arriba)
+npm i node-os-utils

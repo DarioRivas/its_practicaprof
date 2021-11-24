@@ -22,7 +22,7 @@
     })
     enrutador.delete('/clientes/:codigo', async (req, res) => {
         const id = req.params.codigo
-        await db.query('DELETE FROM clientes WHERE id = ?', [id], (err, result) => {
+        await db.query('DELETE FROM cliente WHERE idcliente = ?', [id], (err, result) => {
             if (err) {
                 return console.log('ALGO HA OCURRIDO')
             } else {

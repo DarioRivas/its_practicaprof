@@ -47,6 +47,12 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/producto">Producto</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/socket">Socket</router-link>
+          </li>
+           <li class="nav-item">
+            <router-link class="nav-link" to="/system">SystemInformation</router-link>
+          </li>
         </ul>
       </div>
     </div>

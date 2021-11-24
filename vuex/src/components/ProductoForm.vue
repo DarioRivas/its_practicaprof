@@ -94,13 +94,12 @@
                 @click="eliminarProducto(producto.id_producto)"
                 class="btn btn-danger btn-sm"
               >
-                <i class="bi bi-x-circle"></i>
-                ELIMINAR
+                <i class="bi bi-trash-fill"></i> ELIMINAR
               </button>
             </td>
             <td>
               <button @click="editar(producto)" class="btn btn-primary btn-sm">
-                <i class="bi bi-wrench"></i>
+                <i class="bi bi-pencil-square"></i>
                 EDITAR
               </button>
             </td>

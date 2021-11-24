@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="border rounded p-5">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body text-right">
+                <h5 class="card-title" align="right">{{ clienteRazon }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted" align="right">Dirección de IP {{ clienteIp }}</h6>
+                <p class="card-text">
+                <ul>
+                    <li>Uso de CPU</li>
+                    <li>Cores</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h5>{{ modelDescripcion }}</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>{{ modelValor }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h5>{{ coresDescripcion }}</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3>{{ coresValor }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h5>{{ cpuFreeDescripcion }}</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3>{{ cpuFreeValor }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h5>{{ cpuUseDescripcion }}</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h3>{{ cpuUseValor }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
