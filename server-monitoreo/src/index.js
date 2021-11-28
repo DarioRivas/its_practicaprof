@@ -41,11 +41,11 @@ io.on('connection', (socket) => {
     });
 
     nodeDiskInfo.getDiskInfo()
-    .then(disks => {
-        socket.emit('drive-info', {
-            infoDiscos: disks
-        })
-    });
+        .then(disks => {
+            socket.emit('drive-info', {
+                infoDiscos: disks
+            })
+        });
 
     setInterval(() => {
         cpu.free()
@@ -74,7 +74,15 @@ io.on('connection', (socket) => {
                         descUtil: 'Memoria Utilizada',
                         dataUtil: info.usedMemMb + ' Mb',
                         descPorc: 'Memoria Libre (%)',
-                        dataPorc: info.freeMemPercentage + '%'
+                        dataPorc: info.freeMemPercentage + '%',
+                        data: info.usedMemMb
+                    })
+            });
+        mem.info()
+            .then(info => {
+                socket.emit('mem-graph',
+                    {
+                        data: info.usedMemMb
                     })
             });
     }, 1000)

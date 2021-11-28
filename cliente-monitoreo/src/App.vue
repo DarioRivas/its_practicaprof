@@ -43,7 +43,7 @@
       </ul>
     </div>
 
-    <div class="content-container">
+    <div class="content-container container-fluid">
       <div class="container-fluid">
         <div class="container mt-3">
           <router-view />

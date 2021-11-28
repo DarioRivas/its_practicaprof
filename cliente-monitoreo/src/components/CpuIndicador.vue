@@ -19,7 +19,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{ direccion_ip }}</h5>
                 <p class="card-text">Estado de CPU del equipo</p>
-                <a href="cliente" class="btn btn-primary"
+                <a href="#/cliente" class="btn btn-primary"
                   >Seleccionar otro equipo</a
                 >
               </div>

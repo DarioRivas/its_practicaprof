@@ -3,7 +3,7 @@
     <div class="card-header p-3">
       <div class="row">
         <div class="col">
-          <div class="text-start"><h3>Almacenamiento</h3></div>
+          <div class="text-start"><h3>ALMACENAMIENTO</h3></div>
         </div>
         <div class="col">
           <div class="text-end"><i class="h3 bi bi-bar-chart-fill"></i></div>
@@ -18,8 +18,8 @@
               <div class="card-header">Equipo de {{ clienteRazon }}</div>
               <div class="card-body">
                 <h5 class="card-title">{{ direccion_ip }}</h5>
-                <p class="card-text">Estado de CPU del equipo</p>
-                <a href="cliente" class="btn btn-primary"
+                <p class="card-text">Medios de Almacenamiento</p>
+                <a href="#/cliente" class="btn btn-primary"
                   >Seleccionar otro equipo</a
                 >
               </div>

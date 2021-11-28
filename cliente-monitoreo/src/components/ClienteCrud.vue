@@ -213,7 +213,7 @@ export default {
   },
   methods: {
     listarClientes() {
-      this.axios.get("http://localhost:3000/cliente").then((result) => {
+      this.axios.get("http://" + localStorage.getItem('servidor') +"/cliente").then((result) => {
         this.lista = result.data;
       });
     },
@@ -245,7 +245,7 @@ export default {
         direccion_ip: this.direccion_ip,
         sistema_operativo: this.sistema_operativo,
       };
-      this.axios.post("http://localhost:3000/cliente", cli).then((result) => {
+      this.axios.post("http://" + localStorage.getItem('servidor') +"/cliente", cli).then((result) => {
         alert(result.data);
         this.vaciarCliente();
         this.listarClientes();
@@ -253,7 +253,7 @@ export default {
     },
     eliminarCliente(idcliente) {
       this.axios
-        .delete("http://localhost:3000/cliente/" + idcliente)
+        .delete("http://" + localStorage.getItem('servidor') +"/cliente/" + idcliente)
         .then((result) => {
           alert(result.data);
           this.listarClientes();
@@ -285,7 +285,7 @@ export default {
       };
       this.axios
         .put(
-          "http://localhost:3000/cliente/" + this.idcliente,
+          "http://" + localStorage.getItem('servidor') +"/cliente/" + this.idcliente,
           clientemodificado
         )
         .then((result) => {
